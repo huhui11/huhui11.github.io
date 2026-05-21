@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>播放器图标</title>
+    <style>
+        /* 外层大盒子：紫色渐变背景 */
+        .player-box {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            background: radial-gradient(circle, #b19cd9 0%, #6c5ce7 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        /* 中层深色盒子 */
+        .mid-box {
+            width: 120px;
+            height: 120px;
+            background-color: #5543a3;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 内层白色圆形播放按钮 */
+        .play-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: relative;
+        }
+        /* 播放三角 */
+        .play-circle::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 22px;
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 20px solid #6c5ce7;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-box">
+        <div class="mid-box">
+            <div class="play-circle"></div>
+        </div>
+    </div>
+</body>
+</html>
