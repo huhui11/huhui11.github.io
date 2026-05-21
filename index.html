@@ -1,134 +1,135 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8" />
-<title>修仙秘境 · 动态背景</title>
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    <meta charset="UTF-8" />
+    <title>修仙秘境 · 动态背景</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background: #0a0a18;
-    position: relative;
-  }
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: #0a0a18;
+            position: relative;
+        }
 
-  /* 仙雾云海 */
-  .cloud {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 50% 20%,
-      rgba(160, 220, 255, 0.22) 0%,
-      rgba(100, 160, 220, 0.18) 25%,
-      rgba(60, 100, 180, 0.12) 45%,
-      rgba(20, 30, 60, 0.08) 70%,
-      #0a0a18 100%);
-    animation: float 35s linear infinite alternate;
-  }
+        /* 仙雾云海 */
+        .cloud {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 20%,
+            rgba(160, 220, 255, 0.22) 0%,
+            rgba(100, 160, 220, 0.18) 25%,
+            rgba(60, 100, 180, 0.12) 45%,
+            rgba(20, 30, 60, 0.08) 70%,
+            #0a0a18 100%);
+            animation: float 35s linear infinite alternate;
+        }
 
-  /* 仙气流光 */
-  .stream {
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    top: -25%;
-    left: -25%;
-    background: linear-gradient(135deg,
-      transparent 30%,
-      rgba(255, 230, 140, 0.08) 50%,
-      transparent 70%);
-    animation: flow 22s linear infinite;
-  }
+        /* 仙气流光 */
+        .stream {
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            background: linear-gradient(135deg,
+            transparent 30%,
+            rgba(255, 230, 140, 0.08) 50%,
+            transparent 70%);
+            animation: flow 22s linear infinite;
+        }
 
-  /* 太极仙光光晕 */
-  .aura {
-    position: absolute;
-    width: 550px;
-    height: 550px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(circle,
-      rgba(255, 240, 160, 0.25) 0%,
-      rgba(220, 190, 100, 0.18) 30%,
-      transparent 70%);
-    border-radius: 50%;
-    animation: pulse 16s ease-in-out infinite alternate;
-  }
+        /* 太极仙光光晕 */
+        .aura {
+            position: absolute;
+            width: 550px;
+            height: 550px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle,
+            rgba(255, 240, 160, 0.25) 0%,
+            rgba(220, 190, 100, 0.18) 30%,
+            transparent 70%);
+            border-radius: 50%;
+            animation: pulse 16s ease-in-out infinite alternate;
+        }
 
-  /* 星辰仙点 */
-  .stars {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image:
-      radial-gradient(2px 2px at 20px 30px, #fff, transparent),
-      radial-gradient(2px 2px at 40px 70px, #ffefc0, transparent),
-      radial-gradient(1px 1px at 50px 50px, #ffdd80, transparent),
-      radial-gradient(2px 2px at 130px 80px, #fff, transparent),
-      radial-gradient(1px 1px at 90px 10px, #fff3c8, transparent);
-    background-size: 200px 200px;
-    animation: twinkle 5s ease-in-out infinite alternate;
-    opacity: 0.8;
-  }
+        /* 星辰仙点 */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+            radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+            radial-gradient(2px 2px at 40px 70px, #ffefc0, transparent),
+            radial-gradient(1px 1px at 50px 50px, #ffdd80, transparent),
+            radial-gradient(2px 2px at 130px 80px, #fff, transparent),
+            radial-gradient(1px 1px at 90px 10px, #fff3c8, transparent);
+            background-size: 200px 200px;
+            animation: twinkle 5s ease-in-out infinite alternate;
+            opacity: 0.8;
+        }
 
-  /* 金光仙带 */
-  .light {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
-      transparent,
-      rgba(255, 220, 120, 0.06),
-      transparent);
-    animation: lightMove 28s linear infinite;
-  }
+        /* 金光仙带 */
+        .light {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 220, 120, 0.06),
+            transparent);
+            animation: lightMove 28s linear infinite;
+        }
 
-  /* 动画 */
-  @keyframes float {
-    0% { transform: scale(1) translate(0, 0); }
-    100% { transform: scale(1.12) translate(-2%, -2%); }
-  }
+        /* 动画 */
+        @keyframes float {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.12) translate(-2%, -2%); }
+        }
 
-  @keyframes flow {
-    0% { background-position: -100% 100%; }
-    100% { background-position: 100% -100%; }
-  }
+        @keyframes flow {
+            0% { background-position: -100% 100%; }
+            100% { background-position: 100% -100%; }
+        }
 
-  @keyframes pulse {
-    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
-    100% { transform: translate(-50%, -50%) scale(1.35); opacity: 0.95; }
-  }
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+            100% { transform: translate(-50%, -50%) scale(1.35); opacity: 0.95; }
+        }
 
-  @keyframes twinkle {
-    0% { opacity: 0.5; }
-    100% { opacity: 1; }
-  }
+        @keyframes twinkle {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
 
-  @keyframes lightMove {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
-  }
-</style>
+        @keyframes lightMove {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        </style>
 </head>
 
 <body>
-  <div class="cloud"></div>
-  <div class="stream"></div>
-  <div class="aura"></div>
-  <div class="stars"></div>
-  <div class="light"></div>
-</body>
+    <div class="cloud"></div>
+    <div class="stream"></div>  
+    <div class="aura"></div>
+    <div class="stars"></div>
+    <div class="light"></div>
+
     <h1>25051030321</h1>
     <p style="text-align: left;margin-top: 30px;">
     <div><a href="1.html">作业1</a></div>
     <div><a href="3.html">作业2</a></div>
     <div><a href="4.html">播放器</a></div>
     </p>
+</body>
 </html>
