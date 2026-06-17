@@ -1,94 +1,71 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网上书城用户注册</title>
+    <title>地球日焦点图</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: #fff;
-        }
-        
-        .wrap{
-            width: 570px;
+         .banner {
+            width: 750px;
+            height: 320px;
             margin: 30px auto;
-            border: 4px solid #ffffff;
-            background: #e8e8e8;
-            padding: 12px;
+            position: relative;
+            background: url("banner1.jpg") no-repeat;
+            background-size: 100% 100%;
         }
-        .inner-box{
-            border: 3px solid #ffffff;
+        /* 左右箭头 绝对定位 */
+        .left,.right {
+            width: 42px;
+            height: 42px;
+            position: absolute;
+            top: 50%;
+            margin-top: -21px;
         }
-        .top-title{
-            background-color: #606060;
-            color: #fff;
-            text-align: center;
-            font-size: 26px;
-            letter-spacing: 11px;
-            padding: 12px 0;
+        .left {
+            left: 10px;
+            background: url(arrow1.png) no-repeat;
+            background-size: 100%;
         }
-  
-        .reg-title{
-            padding: 10px 30px;
-            font-size: 22px;
-            background: #dddddd;
+        .right {
+            right: 10px;
+            background: url(arrow2.png) no-repeat;
+            background-size: 100%;
         }
-        table{
-            border-collapse: collapse;
-            width: 100%;
+        /* 圆点容器 */
+        .dots {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            margin-left: -50px;
+            overflow: hidden;
         }
-        td{
-            padding: 12px 9px;
-            text-align: center;
+        /* 圆点浮动横向排列 */
+        .dot {
+            width:13px;
+            height:13px;
+            float: left;
+            margin: 0 4px;
+            background: url(point1.png) no-repeat;
+            background-size:100%;
         }
-        input{
-            width: 340px;
-            height: 30px;
-            border: 1px solid #707070;
-            padding: 0 8px;
-            font-size: 14px;
+        /* 选中圆点 */
+        .dot.on {
+            background-image: url(point2.png);
         }
-        button{
-            width: 340px;
-            height: 36px;
-            background-color: #555555;
-            color: #fff;
-            border: none;
-            font-size: 16px;
+        .dot:hover{
+            background-image: url(point2.png);
             cursor: pointer;
-        }
-        button:hover {
-            background-color: #333333;
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <div class="top-title">网上书城</div>
-        <div class="inner-box">
-            <div class="reg-title">➕ 注册新用户</div>
-            <table>
-                <tr>
-                    <td><input type="text" placeholder="请输入用户名"></td>
-                </tr>
-                <tr>
-                    <td><input type="password" placeholder="请输入密码"></td>
-                </tr>
-                <tr>
-                    <td><input type="password" placeholder="请确认密码"></td>
-                </tr>
-                <tr>
-                    <td><input type="email" placeholder="请输入电子邮件"></td>
-                </tr>
-                <tr>
-                    <td><button>注册新用户</button></td>
-                </tr>
-            </table>
+    <div class="banner">
+        <a href="" class="left"></a >
+        <a href="" class="right"></a >
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot on"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
     </div>
 </body>
